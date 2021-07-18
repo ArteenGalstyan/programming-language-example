@@ -1,4 +1,4 @@
-package src.main.Tokenizer;
+package src.main.java.example.tokenizer;
 
 public class MultiplicationToken implements Token{
     //public MultiplicationToken() {}

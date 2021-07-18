@@ -1,4 +1,4 @@
-package src.main.Tokenizer;
+package src.main.java.example.tokenizer;
 
 public class PlusToken implements Token{
     //public PlusToken() {}
