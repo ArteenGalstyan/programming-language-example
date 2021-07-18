@@ -11,4 +11,14 @@ public class IntegerToken implements Token {
     public String toString() {
         return Integer.toString(value);
     }
+
+    @Override
+    public boolean equals(final Object obj) {
+        return (obj instanceof IntegerToken && value == ((IntegerToken)obj).value);
+    }
+
+    @Override
+    public int hashCode() {
+        return value;
+    }
 }
