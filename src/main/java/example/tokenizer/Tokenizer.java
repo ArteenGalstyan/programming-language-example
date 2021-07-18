@@ -16,6 +16,12 @@ public class Tokenizer {
         this.position = 0;
     }
 
+    private void skipWhitespace() {
+        while (position < input.length() &&
+               Character.isWhitespace(input.charAt(position))) {
+            position++;
+        }
+    } // skipWhitespace
 
     private IntegerToken tokenizeInteger() {
         assert(position < input.length() && Character.isDigit(input.charAt(position)));
@@ -40,6 +46,8 @@ public class Tokenizer {
     public Token[] tokenize() throws TokenizerException {
         final List<Token> tokens = new ArrayList<Token>();
         position = 0;
+
+        skipWhitespace();
 
         while (position < input.length()) {
             final char currentChar = input.charAt(position);
