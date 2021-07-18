@@ -49,6 +49,9 @@ public class Tokenizer {
             } else if (input.charAt(position) == '-') {
                 tokens.add(new MinusToken());
                 position++;
+            } else if (input.charAt(position) == '*') {
+                tokens.add(new MultiplicationToken());
+                position++;
             } else if (Character.isDigit(currentChar)) {
                 tokens.add(tokenizeInteger());
             } else {
