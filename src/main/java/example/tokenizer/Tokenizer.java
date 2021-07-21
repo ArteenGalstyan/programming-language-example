@@ -1,4 +1,4 @@
-package src.main.java.example.tokenizer;
+package example.tokenizer;
 
 import java.util.List;
 import java.util.ArrayList;

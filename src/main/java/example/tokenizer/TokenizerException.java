@@ -1,4 +1,4 @@
-package src.main.java.example.tokenizer;
+package example.tokenizer;
 
 public class TokenizerException extends Exception {
     public TokenizerException(final String message) {

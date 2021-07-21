@@ -7,7 +7,7 @@
   <artifactId>example</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>programming-language-example</name>
+  <name>example</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>

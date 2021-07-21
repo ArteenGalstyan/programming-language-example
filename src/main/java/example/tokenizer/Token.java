@@ -1,3 +1,3 @@
-package src.main.java.example.tokenizer;
+package example.tokenizer;
 
 public interface Token {}

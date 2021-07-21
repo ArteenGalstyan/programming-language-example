@@ -1,6 +1,6 @@
-package src.test.java.example.tokenizer;
+package example.tokenizer;
 
-import src.main.java.example.tokenizer.*;
+
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
@@ -21,6 +21,13 @@ public class TokenizerTest {
     @Test
     public void testSingleIntegerToken() throws TokenizerException {
         assertTokenizes("123", new Token[]{ new IntegerToken(123) });
+    }
+    
+    // "123+"
+    @Test
+    public void testIntegerPlus() throws TokenizerException {
+        final Token[] expected = new Token[] {new IntegerToken(123), new PlusToken() };
+        assertTokenizes("123+", expected );
     }
 
     // "+" = [+]
@@ -45,5 +52,11 @@ public class TokenizerTest {
     @Test
     public void testWhitespace() throws TokenizerException {
         assertTokenizes(" ", new Token[0]);
+    }
+
+    // "$" = exception
+    @Test(expected = TokenizerException.class)
+    public void testInvalidCharacter() throws TokenizerException {
+        assertTokenizes("$", null);
     }
 }
