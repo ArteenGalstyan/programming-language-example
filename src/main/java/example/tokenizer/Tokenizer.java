@@ -60,6 +60,12 @@ public class Tokenizer {
             } else if (input.charAt(position) == '*') {
                 tokens.add(new MultiplicationToken());
                 position++;
+            } else if (input.charAt(position) == '(') {
+                tokens.add(new LeftParenToken());
+                position++;
+            } else if (input.charAt(position) == ')') {
+                tokens.add(new RightParenToken());
+                position++;
             } else if (Character.isDigit(currentChar)) {
                 tokens.add(tokenizeInteger());
             } else {

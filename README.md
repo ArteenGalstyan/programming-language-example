@@ -35,3 +35,4 @@ p ::= i | '(' e ')'
 - Plus token
 - Minus token
 - Multiplication token
+- Left/Right Paranthesis tokens

@@ -23,7 +23,7 @@ public class OperatorExpression implements Expression {
 
     @Override
     public int hashCode() {
-        return e1.hashCode() + op.hashCode() + e2.hashCode();
+        return e1.hashCode() + e2.hashCode() + op.hashCode();
     }
 
     @Override
