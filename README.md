@@ -3,21 +3,36 @@
 
 ## Language ##
 
+### Abstract Grammar ###
+
+```
+i is an int
+op is an operator
+e is an expression
+
+op ::= '+' | '-' | '*'
+e ::= i | e1 op e2
+```
+
+### Concrete Grammar ###
+
 ```
 i is an int
 e is an expression
-e::= i | e1 + e2 | e1 - e2 | e1 * e2
+a is an additive expression
+m is a multiplicative expression
+p is a primary expression
 
-valid examples:
-1
-123
-1 + 1
-1 - 1
-1 * 1
+e ::= a
+a ::= m (('+'|'-') m)*
+m ::= p ('*' p)*
+p ::= i | '(' e ')'
 ```
+
 ### Tokens ###
 
 - Integer tokens
 - Plus token
 - Minus token
 - Multiplication token
+- Left/Right Paranthesis tokens
